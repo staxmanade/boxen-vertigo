@@ -59,3 +59,24 @@ github "xquartz",     "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+github "dropbox",    "1.2.0"
+#github "emacs",      "1.1.0", :repo => "jwalsh/puppet-emacs"
+#github "firefox",    "1.1.7"
+#github "gpg",        "0.0.4", :repo => "steinim/puppet-gpg"
+#github "hipchat",    "1.1.0"
+github "iterm2",     "1.0.3"
+#github "onepassword", "1.1.0"
+github "skype",      "1.0.7"
+github "zsh",        "1.0.0"
+github "ohmyzsh",    "1.0.0", :repo => "samjsharpe/puppet-ohmyzsh"
+#github "charles",    "1.0.3"
+github "skype",      "1.0.7"
+
+
+github "osx"
+github "alfred"
+github "iterm2"
+github "chrome"
+github "mou"     # Markdown Editor
+github "spectacle"   # window manager
+github "cloudapp"
