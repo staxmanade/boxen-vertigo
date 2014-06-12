@@ -29,6 +29,11 @@ GITHUBTARBALL
     dropbox (1.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-flux
+  specs:
+    flux (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.2.0)
@@ -160,6 +165,7 @@ DEPENDENCIES
   cloudapp (>= 0)
   dnsmasq (= 1.0.1)
   dropbox (= 1.2.0)
+  flux (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.0.101)
   git (= 2.4.0)

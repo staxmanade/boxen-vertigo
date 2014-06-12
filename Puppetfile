@@ -71,6 +71,7 @@ github "zsh",        "1.0.0"
 github "ohmyzsh",    "1.0.0", :repo => "samjsharpe/puppet-ohmyzsh"
 #github "charles",    "1.0.3"
 github "skype",      "1.0.7"
+github "flux",      "1.0.1"
 
 
 github "osx"

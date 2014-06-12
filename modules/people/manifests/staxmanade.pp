@@ -13,6 +13,7 @@ class people::staxmanade {
   include cloudapp
   include zsh
   include ohmyzsh
+  include flux
 
   include osx::global::enable_keyboard_control_access
   include osx::global::enable_standard_function_keys
