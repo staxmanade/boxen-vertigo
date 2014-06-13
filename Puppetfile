@@ -74,6 +74,8 @@ github "skype",      "1.0.7"
 github "flux",      "1.0.1"
 
 
+
+github "gimp",       "1.0.1"
 github "osx"
 github "alfred"
 github "iterm2"
