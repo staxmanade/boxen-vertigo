@@ -1,10 +1,10 @@
 # Our Boxen
 
-This is a template Boxen project designed for your organization to fork and
+This is a fork of the template Boxen project designed for your organization to fork and
 modify appropriately.
+
 The Boxen rubygem and the Boxen puppet modules are only a framework for getting
 things done.
-This repository template is just a basic example of _how_ to do things with them.
 
 ## Getting Started
 
@@ -66,12 +66,9 @@ your boxen:
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-git clone https://github.com/boxen/our-boxen /opt/boxen/repo
+git clone https://github.com/staxmanade/boxen-vertigo.git /opt/boxen/repo
 cd /opt/boxen/repo
-git remote rm origin
-git remote add origin <the location of my new git repository>
-git push -u origin master
-```
+``
 
 Now that your boxen is bootstrapped, you can run the following to
 install the default configuration from this repo:
@@ -94,7 +91,7 @@ If you _don't_ want to use boxen-web, folks can get using your boxen like so:
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-git clone <location of my new git repository> /opt/boxen/repo
+git clone https://github.com/staxmanade/boxen-vertigo.git /opt/boxen/repo
 cd /opt/boxen/repo
 ./script/boxen
 ```
