@@ -30,6 +30,39 @@ class people::staxmanade {
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
 
+  class { 'osx::global::natural_mouse_scrolling':
+    enabled => false
+  }
+
+  exec { "osx: mouse scaling":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write -g com.apple.mouse.scaling -float 2.1'"
+  }
+
+  # OSX: Kill the dashboard
+  exec { "osx: disable dashboard":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.dashboard mcx-disabled -boolean true'"
+  }
+
+  exec { "Setup pictures":
+    provider => 'shell',
+    command => "env -i bash -c 'mkdir -p ~/Pictures/Screenshots && defaults write com.apple.screencapture location ~/Pictures/Screenshots/ && killall SystemUIServer'"
+  }
+
+  # Skype
+  exec { "Skype: DisableAllVisualNotifications":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.skype.skype DisableAllVisualNotifications -boolean true'"
+  }
+
+  # Safari
+  exec { "Safari: enable dev mode":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.Safari IncludeDevelopMenu -boolean true'"
+  }
+
+  #XCode
   exec { "XCode: turn on line numbers":
     provider => 'shell',
     command => "env -i bash -c 'defaults write com.apple.dt.Xcode DVTTextShowLineNumbers YES'"
@@ -38,15 +71,6 @@ class people::staxmanade {
   exec { "XCode: set to the midnight theme":
     provider => 'shell',
     command => "env -i bash -c 'defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme \'Midnight.dvtcolortheme\''"
-  }
-
-  class { 'osx::global::natural_mouse_scrolling':
-    enabled => false
-  }
-
-  exec { "Setup pictures":
-    provider => 'shell',
-    command => "env -i bash -c 'mkdir -p ~/Pictures/Screenshots && defaults write com.apple.screencapture location ~/Pictures/Screenshots/ && killall SystemUIServer'"
   }
 
 
