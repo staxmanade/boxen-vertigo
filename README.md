@@ -1,5 +1,15 @@
 # Our Boxen
 
+# TL;DR (Quick Start)
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone https://github.com/staxmanade/boxen-vertigo.git /opt/boxen/repo
+cd /opt/boxen/repo
+./script/boxen
+```
+
 This is a fork of the template Boxen project designed for your organization to fork and
 modify appropriately.
 
