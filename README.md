@@ -78,7 +78,7 @@ sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
 git clone https://github.com/staxmanade/boxen-vertigo.git /opt/boxen/repo
 cd /opt/boxen/repo
-``
+```
 
 Now that your boxen is bootstrapped, you can run the following to
 install the default configuration from this repo:
