@@ -25,10 +25,12 @@ class people::staxmanade {
   include osx::global::expand_save_dialog
   include osx::dock::clear_dock
   include osx::finder::show_hidden_files
+  include osx::finder::enable_quicklook_text_selection
 
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
+  include osx::dock::autohide
 
   class { 'osx::global::natural_mouse_scrolling':
     enabled => false
@@ -37,6 +39,11 @@ class people::staxmanade {
   exec { "osx: mouse scaling":
     provider => 'shell',
     command => "env -i bash -c 'defaults write -g com.apple.mouse.scaling -float 2.1'"
+  }
+
+  exec { "finder: show file extensions":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.finder AppleShowAllExtensions -boolean true'"
   }
 
   # OSX: Kill the dashboard
