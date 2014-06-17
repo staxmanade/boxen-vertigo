@@ -14,7 +14,6 @@ class people::staxmanade {
   include chrome::canary
   include mou               # Markdown Editor
   include spectacle         # window manager
-  include cloudapp
   include zsh
   include ohmyzsh
   include flux

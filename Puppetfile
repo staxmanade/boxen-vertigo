@@ -82,4 +82,3 @@ github "iterm2"
 github "chrome"
 github "mou"     # Markdown Editor
 github "spectacle"   # window manager
-github "cloudapp"
