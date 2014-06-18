@@ -55,6 +55,12 @@ class people::staxmanade {
     provider => 'shell',
     command => "env -i bash -c 'mkdir -p ~/Pictures/Screenshots && defaults write com.apple.screencapture location ~/Pictures/Screenshots/ && killall SystemUIServer'"
   }
+  
+  # Mail
+  exec { "Mail: adjust polling time":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.mail PollTime 1'"
+  }
 
   # Skype
   exec { "Skype: DisableAllVisualNotifications":
