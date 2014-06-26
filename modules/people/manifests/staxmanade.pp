@@ -84,6 +84,12 @@ class people::staxmanade {
     command => "env -i bash -c 'defaults write com.apple.dt.Xcode DVTFontAndColorCurrentTheme \'Midnight.dvtcolortheme\''"
   }
 
+  exec { "XCode: double-click opens in new tab":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.dt.Xcode IDEEditorCoordinatorTarget_DoubleClick \'SeparateTab\''"
+  }
+
+
 
   file { $my:
     ensure  => directory
