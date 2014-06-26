@@ -89,6 +89,16 @@ class people::staxmanade {
     command => "env -i bash -c 'defaults write com.apple.dt.Xcode IDEEditorCoordinatorTarget_DoubleClick \'SeparateTab\''"
   }
 
+  exec { "XCode: do not ask to stop running sim 1":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.dt.Xcode IDEEditorCoordinatorTarget_DoubleClick 1"
+  }
+
+  exec { "XCode: do not ask to stop running sim 2":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.apple.dt.Xcode IDESuppressStopExecutionWarningTarget \'IDESuppressStopExecutionWarningTargetValue_Stop\''"
+  }
+
 
 
   file { $my:
