@@ -14,11 +14,6 @@ GITHUBTARBALL
     chrome (1.1.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-cloudapp
-  specs:
-    cloudapp (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
   specs:
     dnsmasq (1.0.1)
@@ -167,7 +162,6 @@ DEPENDENCIES
   alfred (>= 0)
   boxen (= 3.6.1)
   chrome (>= 0)
-  cloudapp (>= 0)
   dnsmasq (= 1.0.1)
   dropbox (= 1.2.0)
   flux (= 1.0.1)

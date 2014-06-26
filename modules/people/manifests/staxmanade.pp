@@ -29,7 +29,6 @@ class people::staxmanade {
   include osx::universal_access::enable_scrollwheel_zoom
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
-  include osx::dock::autohide
 
   class { 'osx::global::natural_mouse_scrolling':
     enabled => false
