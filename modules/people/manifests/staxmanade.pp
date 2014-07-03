@@ -99,6 +99,10 @@ class people::staxmanade {
     command => "env -i bash -c 'defaults write com.apple.dt.Xcode IDESuppressStopExecutionWarningTarget \'IDESuppressStopExecutionWarningTargetValue_Stop\''"
   }
 
+  exec { "Mou: enable spellcheck while typing":
+    provider => 'shell',
+    command => "env -i bash -c 'defaults write com.mouapp.Mou spellCheckerKeyString 1'"
+  }
 
 
   file { $my:
